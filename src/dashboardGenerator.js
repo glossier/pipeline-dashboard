@@ -73,6 +73,11 @@ class DashboardGenerator {
                                 "stat": "Average",
                                 "color": "#a02899"
                             }],
+                            [".", "SuccessCount", ".", ".", {
+                                "label": "Success Count",
+                                "stat": "Sum",
+                                "color": "#a02899"
+                            }],
                         ],
                         "region": state.region,
                         "title": pipelineName,
@@ -106,6 +111,10 @@ class DashboardGenerator {
             {
                 "title": "Feedback Time",
                 "description": "mean lead time for failed pipeline executions"
+            },
+            {
+                "title": "Success Count",
+                "description": "sum of successful pipeline executions"
             },
         ].forEach(l => {
             dashboard.widgets.push({
